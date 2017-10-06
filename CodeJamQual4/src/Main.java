@@ -43,7 +43,7 @@ public class Main {
                     if (c == 'L') {
                         stringBuilder.append(s);
                     } else {
-                        stringBuilder.append(repeatedL); //RepeatedL is not G * N due to change of LLL to GGG
+                        stringBuilder.append(repeatedL); //RepeatedL is now G * N due to change of LLL to GGG
                     }
                 }
                 str = stringBuilder.toString();
@@ -51,7 +51,7 @@ public class Main {
             finals.add(str);
         }
 
-        
+
 
         return "Done";
     }
