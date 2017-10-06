@@ -1,5 +1,3 @@
-import com.sun.deploy.util.StringUtils;
-
 import java.util.HashSet;
 
 public class Main {
@@ -16,6 +14,7 @@ public class Main {
         String l = "L";
         String repeatedG = new String(new char[length]).replace("\0", g);
         String repeatedL = new String(new char[length]).replace("\0", l);
+        // CREATE ORIGINAL SEQUENCES
         for (int i = 0; i < length; i++) {
             for (int j = i; j < length; j++) {
                 String newStr = repeatedG.substring(0,j) + "L" + repeatedG.substring(j + 1, length);
@@ -34,10 +33,7 @@ public class Main {
             String newRep = repeatedL.substring(0,i) + "G" + repeatedL.substring(i + 1, length);
             repeatedL = newRep;
         }
-        for (String s : originals) {
-            //System.out.println(s);
-        }
-        //System.out.println("Done");
+        //MULTIPLY SEQUENCES BY COMPLEXITY
         HashSet<String> finals = new HashSet<>();
         for (String s : originals){
             String str = s;
@@ -55,9 +51,7 @@ public class Main {
             finals.add(str);
         }
 
-        for (String s : finals) {
-            System.out.println(s);
-        }
+        
 
         return "Done";
     }
